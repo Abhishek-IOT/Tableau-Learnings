@@ -1,0 +1,10 @@
+𝗗𝗶𝗳𝗳𝗲𝗿𝗲𝗻𝗰𝗲 𝗯𝗲𝘁𝘄𝗲𝗲𝗻 .𝘁𝘄𝗯 𝗮𝗻𝗱 .𝘁𝘄𝗯𝘅 𝗳𝗶𝗹𝗲𝘀 𝗶𝗻 𝗧𝗮𝗯𝗹𝗲𝗮𝘂 :
+
+One of the Key Difference between them is that:
+• .𝘁𝘄𝗯 contains the sheets and dashboards but does not contains the data.
+• .𝘁𝘄𝗯𝘅 on the other side is the sheets and dashboards with data also.
+
+𝗪𝗵𝗲𝗿𝗲 𝗶𝘁 𝗰𝗮𝗻 𝗯𝗲 𝗵𝗮𝗻𝗱𝘆 𝘁𝗼 𝘂𝘀𝗲 𝘁𝗵𝗲𝘀𝗲 𝗲𝘅𝘁𝗲𝗻𝘀𝗶𝗼𝗻𝘀 :
+• Use .twb when you don't want to share the data with others or you have a constraint of not sharing underlying data.
+• Use .twbx when sharing data is not issue .Mostly .twbx is used so that other tableau desktops can directly use it. 
+
