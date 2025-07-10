@@ -1,0 +1,7 @@
+If I was to take requirement what would I have done.(If they want in EXCEL only).
+
+1)Have the meeting with client and ask for sample data so that we can understand what what data he is capturing.
+2)Then after seeing the data deciding on what can be the ideal KPI.
+3)Then gather the data in excel and they have to manually insert the records in excel.
+3)We will create sheets so that we can define different sheets for proper KPIs and then creating dashboards.
+4)Document the KPI formula's and Dashboards and sharing it with client for future reference.
