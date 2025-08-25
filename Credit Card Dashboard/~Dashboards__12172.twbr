@@ -1,0 +1,2252 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20252.25.0514.2217                               -->
+<workbook original-version='18.1' source-build='2025.2.0 (20252.25.0514.2217)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <Heatmap />
+    <MapboxVectorStylesAndLayers />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <ParameterDefaultValues />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Max Date Recieved' datatype='date' default-value-field='[federated.1wyahdr1q32cz218liv1f1e0mefo].[Calculation_856528399928164353]' name='[Parameter 1]' param-domain-type='any' role='measure' type='quantitative' value='#2021-04-10#'>
+        <calculation class='tableau' formula='#2021-04-10#' />
+      </column>
+      <column alias='Daily' caption='Trend' datatype='string' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;day&quot;'>
+        <calculation class='tableau' formula='&quot;day&quot;' />
+        <aliases>
+          <alias key='&quot;day&quot;' value='Daily' />
+          <alias key='&quot;month&quot;' value='Monthly' />
+          <alias key='&quot;quarter&quot;' value='Quarterly' />
+          <alias key='&quot;week&quot;' value='Weekly' />
+          <alias key='&quot;year&quot;' value='Yearly' />
+        </aliases>
+        <members>
+          <member alias='Monthly' value='&quot;month&quot;' />
+          <member alias='Yearly' value='&quot;year&quot;' />
+          <member alias='Quarterly' value='&quot;quarter&quot;' />
+          <member alias='Weekly' value='&quot;week&quot;' />
+          <member alias='Daily' value='&quot;day&quot;' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='Sheet1 (Credit Card Dashboard)' inline='true' name='federated.1wyahdr1q32cz218liv1f1e0mefo' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Credit Card Dashboard' name='excel-direct.04umcxp1c989ne1dzvxqn1lvoq7c'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/Dell/Documents/Tableau-Learnings/Credit Card Dashboard/Credit Card Dashboard.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.04umcxp1c989ne1dzvxqn1lvoq7c' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:Y10001:no:A1:Y10001:0' header='yes' outcome='6'>
+            <column datatype='string' name='Company' ordinal='0' />
+            <column datatype='string' name='Company public response' ordinal='1' />
+            <column datatype='string' name='Company response to consumer' ordinal='2' />
+            <column datatype='string' name='Complaint Category' ordinal='3' />
+            <column datatype='integer' name='Complaint ID' ordinal='4' />
+            <column datatype='string' name='Consumer complaint narrative' ordinal='5' />
+            <column datatype='string' name='Consumer consent provided?' ordinal='6' />
+            <column datatype='string' name='Consumer consent provided? (group)' ordinal='7' />
+            <column datatype='string' name='Consumer disputed?' ordinal='8' />
+            <column datatype='date' name='Date received' ordinal='9' />
+            <column datatype='date' name='Date sent to company2' ordinal='10' />
+            <column datatype='string' name='Dimension' ordinal='11' />
+            <column datatype='string' name='Issue' ordinal='12' />
+            <column datatype='string' name='Product' ordinal='13' />
+            <column datatype='string' name='State' ordinal='14' />
+            <column datatype='string' name='Sub-issue' ordinal='15' />
+            <column datatype='string' name='Sub-product' ordinal='16' />
+            <column datatype='string' name='Submitted via' ordinal='17' />
+            <column datatype='string' name='Table Name' ordinal='18' />
+            <column datatype='string' name='Tags' ordinal='19' />
+            <column datatype='string' name='Timely response?' ordinal='20' />
+            <column datatype='integer' name='ZIP code' ordinal='21' />
+            <column datatype='integer' name='Avg No of days' ordinal='22' />
+            <column datatype='integer' name='donut' ordinal='23' />
+            <column datatype='integer' name='Number of Records' ordinal='24' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:Y10001:no:A1:Y10001:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Company</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Company]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Company</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Company public response</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Company public response]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Company public response</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Company response to consumer</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Company response to consumer]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Company response to consumer</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Complaint Category</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Complaint Category]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Complaint Category</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Complaint ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Complaint ID]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Complaint ID</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Consumer complaint narrative</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Consumer complaint narrative]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Consumer complaint narrative</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Consumer consent provided?</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Consumer consent provided?]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Consumer consent provided?</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Consumer consent provided? (group)</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Consumer consent provided? (group)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Consumer consent provided? (group)</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Consumer disputed?</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Consumer disputed?]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Consumer disputed?</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date received</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Date received]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Date received</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date sent to company2</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Date sent to company2]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Date sent to company2</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Dimension</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Dimension]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Dimension</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Issue</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Issue]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Issue</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Product</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Product]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Product</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[State]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>State</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sub-issue</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Sub-issue]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Sub-issue</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sub-product</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Sub-product]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Sub-product</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Submitted via</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Submitted via]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Submitted via</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Table Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Table Name]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Table Name</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Tags</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Tags]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Tags</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Timely response?</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Timely response?]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Timely response?</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ZIP code</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ZIP code]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>ZIP code</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Avg No of days</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Avg No of days]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Avg No of days</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>donut</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[donut]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>donut</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Number of Records</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Number of Records]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Number of Records</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Max Date Recieved' datatype='date' name='[Calculation_856528399928164353]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='{MAX([Date received])}' />
+      </column>
+      <column caption='12 Months Rolling' datatype='boolean' name='[Calculation_856528399930589186]' role='dimension' semantic-role='' type='nominal'>
+        <calculation class='tableau' formula='DATEDIFF(&apos;month&apos;,DATETRUNC(&apos;month&apos;,[Date received]),DATETRUNC(&apos;month&apos;,[Parameters].[Parameter 1]))&lt;12' />
+      </column>
+      <column caption='Rolling 12 months complaints' datatype='integer' name='[Calculation_856528399932530691]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF [Calculation_856528399930589186]= TRUE then [Number of Records] END)' />
+      </column>
+      <column caption='Timely Response' datatype='integer' name='[Calculation_856528399935234052]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Timely response?]=&apos;Yes&apos; THEN 1 ELSE 0 END' />
+      </column>
+      <column caption='Closed %' datatype='real' name='[Calculation_856528399955193861]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='(SUM([Calculation_856528399935234052])/SUM([Number of Records]))*100' />
+      </column>
+      <column caption='In Progress Compliant' datatype='integer' name='[Calculation_856528399963324432]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Company response to consumer]=&apos;In Progress&apos; then [Number of Records] END' />
+      </column>
+      <column caption='In Progress %' datatype='real' name='[Calculation_856528399964037137]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([Calculation_856528399963324432])/SUM([Number of Records])' />
+      </column>
+      <column caption='Trend Dynamic' datatype='date' datatype-customized='true' name='[Calculation_856528400056836115]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='DATE(DATETRUNC([Parameters].[Parameter 2],[Date received]))' />
+      </column>
+      <column datatype='integer' name='[Complaint ID]' role='dimension' type='ordinal' />
+      <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column aggregation='Sum' datatype='integer' default-format='*00000' name='[ZIP code]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <column caption='Sheet1' datatype='table' name='[__tableau_internal_object_id__].[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]' role='measure' type='quantitative' />
+      <column caption='Donut' datatype='integer' name='[donut]' role='measure' type='quantitative' />
+      <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+      <column-instance column='[ZIP code]' derivation='None' name='[none:ZIP code:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[Calculation_856528399955193861]' derivation='User' name='[usr:Calculation_856528399955193861:qk]' pivot='key' type='quantitative' />
+      <group hidden='true' name='[Exclusions (State,ZIP code)]' name-style='unqualified' user:auto-column='exclude'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:State:nk]' />
+          <groupfilter function='level-members' level='[none:ZIP code:ok]' />
+        </groupfilter>
+      </group>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_GB' class='hyper' dbname='Data/TableauTemp/#TableauTemp_1njdkd1174sdsn147ds6a0lg7y4d.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='08/24/2025 04:51:25 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Company</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Company]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Company</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>239</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Company public response</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Company public response]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Company public response</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>16</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Company response to consumer</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Company response to consumer]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Company response to consumer</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>14</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Complaint Category</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Complaint Category]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Complaint Category</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>39</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Complaint ID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Complaint ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Complaint ID</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Sheet1</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>86893</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Consumer complaint narrative</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Consumer complaint narrative]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Consumer complaint narrative</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>28512</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Consumer consent provided?</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Consumer consent provided?]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Consumer consent provided?</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Consumer consent provided? (group)</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Consumer consent provided? (group)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Consumer consent provided? (group)</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Consumer disputed?</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Consumer disputed?]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Consumer disputed?</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Date received</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Date received]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Date received</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Sheet1</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>6374</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Date sent to company2</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Date sent to company2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Date sent to company2</remote-alias>
+              <ordinal>10</ordinal>
+              <family>Sheet1</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>5740</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Dimension</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Dimension]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Dimension</remote-alias>
+              <ordinal>11</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>39</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Issue</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Issue]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Issue</remote-alias>
+              <ordinal>12</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>39</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Product</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Product]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Product</remote-alias>
+              <ordinal>13</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>State</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[State]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>State</remote-alias>
+              <ordinal>14</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>55</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Sub-issue</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Sub-issue]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Sub-issue</remote-alias>
+              <ordinal>15</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Sub-product</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Sub-product]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Sub-product</remote-alias>
+              <ordinal>16</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Submitted via</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Submitted via]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Submitted via</remote-alias>
+              <ordinal>17</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Table Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Table Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Table Name</remote-alias>
+              <ordinal>18</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Tags</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Tags]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Tags</remote-alias>
+              <ordinal>19</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Timely response?</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Timely response?]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Timely response?</remote-alias>
+              <ordinal>20</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ZIP code</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ZIP code]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ZIP code</remote-alias>
+              <ordinal>21</ordinal>
+              <family>Sheet1</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>15050</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Avg No of days</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Avg No of days]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Avg No of days</remote-alias>
+              <ordinal>22</ordinal>
+              <family>Sheet1</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>178</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>donut</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[donut]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>donut</remote-alias>
+              <ordinal>23</ordinal>
+              <family>Sheet1</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Number of Records</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Number of Records]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Number of Records</remote-alias>
+              <ordinal>24</ordinal>
+              <family>Sheet1</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_044FD0591DA749E281BEB5E468F7BDA5]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1wyahdr1q32cz218liv1f1e0mefo].[usr:Calculation_856528399956705293:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1wyahdr1q32cz218liv1f1e0mefo].[usr:Calculation_856528399962144783:qk]&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;[federated.1wyahdr1q32cz218liv1f1e0mefo].[usr:Calculation_856528399955193861:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1wyahdr1q32cz218liv1f1e0mefo]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;USA&quot;' />
+        <semantic-value key='[State].[Name]' value='%null%' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Max Date Recieved' datatype='date' default-value-field='[federated.1wyahdr1q32cz218liv1f1e0mefo].[Calculation_856528399928164353]' name='[Parameter 1]' param-domain-type='any' role='measure' type='quantitative' value='#2021-04-10#'>
+          <calculation class='tableau' formula='#2021-04-10#' />
+        </column>
+        <column alias='Daily' caption='Trend' datatype='string' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;day&quot;'>
+          <calculation class='tableau' formula='&quot;day&quot;' />
+          <aliases>
+            <alias key='&quot;day&quot;' value='Daily' />
+            <alias key='&quot;month&quot;' value='Monthly' />
+            <alias key='&quot;quarter&quot;' value='Quarterly' />
+            <alias key='&quot;week&quot;' value='Weekly' />
+            <alias key='&quot;year&quot;' value='Yearly' />
+          </aliases>
+        </column>
+      </datasource-dependencies>
+      <object-graph>
+        <objects>
+          <object caption='Sheet1' id='Sheet1_044FD0591DA749E281BEB5E468F7BDA5'>
+            <properties context=''>
+              <relation connection='excel-direct.04umcxp1c989ne1dzvxqn1lvoq7c' name='Sheet1' table='[Sheet1$]' type='table'>
+                <columns gridOrigin='A1:Y10001:no:A1:Y10001:0' header='yes' outcome='6'>
+                  <column datatype='string' name='Company' ordinal='0' />
+                  <column datatype='string' name='Company public response' ordinal='1' />
+                  <column datatype='string' name='Company response to consumer' ordinal='2' />
+                  <column datatype='string' name='Complaint Category' ordinal='3' />
+                  <column datatype='integer' name='Complaint ID' ordinal='4' />
+                  <column datatype='string' name='Consumer complaint narrative' ordinal='5' />
+                  <column datatype='string' name='Consumer consent provided?' ordinal='6' />
+                  <column datatype='string' name='Consumer consent provided? (group)' ordinal='7' />
+                  <column datatype='string' name='Consumer disputed?' ordinal='8' />
+                  <column datatype='date' name='Date received' ordinal='9' />
+                  <column datatype='date' name='Date sent to company2' ordinal='10' />
+                  <column datatype='string' name='Dimension' ordinal='11' />
+                  <column datatype='string' name='Issue' ordinal='12' />
+                  <column datatype='string' name='Product' ordinal='13' />
+                  <column datatype='string' name='State' ordinal='14' />
+                  <column datatype='string' name='Sub-issue' ordinal='15' />
+                  <column datatype='string' name='Sub-product' ordinal='16' />
+                  <column datatype='string' name='Submitted via' ordinal='17' />
+                  <column datatype='string' name='Table Name' ordinal='18' />
+                  <column datatype='string' name='Tags' ordinal='19' />
+                  <column datatype='string' name='Timely response?' ordinal='20' />
+                  <column datatype='integer' name='ZIP code' ordinal='21' />
+                  <column datatype='integer' name='Avg No of days' ordinal='22' />
+                  <column datatype='integer' name='donut' ordinal='23' />
+                  <column datatype='integer' name='Number of Records' ordinal='24' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Closed %'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (Credit Card Dashboard)' name='federated.1wyahdr1q32cz218liv1f1e0mefo' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1wyahdr1q32cz218liv1f1e0mefo'>
+            <column caption='Timely Response' datatype='integer' name='[Calculation_856528399935234052]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Timely response?]=&apos;Yes&apos; THEN 1 ELSE 0 END' />
+            </column>
+            <column caption='Closed %' datatype='real' name='[Calculation_856528399955193861]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='(SUM([Calculation_856528399935234052])/SUM([Number of Records]))*100' />
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Timely response?]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_856528399955193861]' derivation='User' name='[usr:Calculation_856528399955193861:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1wyahdr1q32cz218liv1f1e0mefo].[usr:Calculation_856528399955193861:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#76b7b2' fontname='Tableau Bold' fontsize='12'>Closed %</run>
+                <run>Æ&#10;</run>
+                <run fontname='Tableau Bold' fontsize='12'><![CDATA[<[federated.1wyahdr1q32cz218liv1f1e0mefo].[usr:Calculation_856528399955193861:qk]> %]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{84C72BBE-767A-4CAC-A638-F5EE0F5D50A7}' />
+    </worksheet>
+    <worksheet name='Complaints Sparkling'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (Credit Card Dashboard)' name='federated.1wyahdr1q32cz218liv1f1e0mefo' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1wyahdr1q32cz218liv1f1e0mefo'>
+            <column datatype='date' name='[Date received]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date received]' derivation='Month-Trunc' name='[tmn:Date received:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='1' field='[federated.1wyahdr1q32cz218liv1f1e0mefo].[sum:Number of Records:qk]' field-type='quantitative' fold='true' scope='rows' synchronized='true' type='space' />
+            <format attr='display' class='0' field='[federated.1wyahdr1q32cz218liv1f1e0mefo].[sum:Number of Records:qk]' scope='rows' value='false' />
+            <format attr='display' class='1' field='[federated.1wyahdr1q32cz218liv1f1e0mefo].[sum:Number of Records:qk]' scope='rows' value='false' />
+            <format attr='display' class='0' field='[federated.1wyahdr1q32cz218liv1f1e0mefo].[tmn:Date received:qk]' scope='cols' value='false' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1wyahdr1q32cz218liv1f1e0mefo].[sum:Number of Records:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#898989' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1wyahdr1q32cz218liv1f1e0mefo].[sum:Number of Records:qk]' y-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+          </pane>
+        </panes>
+        <rows>([federated.1wyahdr1q32cz218liv1f1e0mefo].[sum:Number of Records:qk] + [federated.1wyahdr1q32cz218liv1f1e0mefo].[sum:Number of Records:qk])</rows>
+        <cols>[federated.1wyahdr1q32cz218liv1f1e0mefo].[tmn:Date received:qk]</cols>
+      </table>
+      <simple-id uuid='{8DF383BA-E186-4D4C-82A8-9379B334202D}' />
+    </worksheet>
+    <worksheet name='Density'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (Credit Card Dashboard)' name='federated.1wyahdr1q32cz218liv1f1e0mefo' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1wyahdr1q32cz218liv1f1e0mefo'>
+            <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column aggregation='Sum' datatype='integer' default-format='*00000' name='[ZIP code]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+            <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+            <column-instance column='[ZIP code]' derivation='None' name='[none:ZIP code:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1wyahdr1q32cz218liv1f1e0mefo].[Exclusions (State,ZIP code)]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='crossjoin'>
+                <groupfilter function='level-members' level='[none:State:nk]' />
+                <groupfilter function='level-members' level='[none:ZIP code:ok]' />
+              </groupfilter>
+              <groupfilter function='union'>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[none:State:nk]' member='&quot;AA&quot;' />
+                  <groupfilter function='member' level='[none:ZIP code:ok]' member='34041' />
+                </groupfilter>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[none:State:nk]' member='&quot;AP&quot;' />
+                  <groupfilter function='union'>
+                    <groupfilter function='member' level='[none:ZIP code:ok]' member='96205' />
+                    <groupfilter function='member' level='[none:ZIP code:ok]' member='96218' />
+                    <groupfilter function='member' level='[none:ZIP code:ok]' member='96224' />
+                    <groupfilter function='member' level='[none:ZIP code:ok]' member='96266' />
+                    <groupfilter function='member' level='[none:ZIP code:ok]' member='96269' />
+                    <groupfilter function='member' level='[none:ZIP code:ok]' member='96310' />
+                    <groupfilter function='member' level='[none:ZIP code:ok]' member='96319' />
+                    <groupfilter function='member' level='[none:ZIP code:ok]' member='96322' />
+                    <groupfilter function='member' level='[none:ZIP code:ok]' member='96326' />
+                    <groupfilter function='member' level='[none:ZIP code:ok]' member='96349' />
+                    <groupfilter function='member' level='[none:ZIP code:ok]' member='96367' />
+                    <groupfilter function='member' level='[none:ZIP code:ok]' member='96546' />
+                    <groupfilter function='member' level='[none:ZIP code:ok]' member='96548' />
+                    <groupfilter function='member' level='[none:ZIP code:ok]' member='96549' />
+                  </groupfilter>
+                </groupfilter>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[none:State:nk]' member='&quot;AR&quot;' />
+                  <groupfilter function='member' level='[none:ZIP code:ok]' member='99556' />
+                </groupfilter>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[none:State:nk]' member='&quot;CA&quot;' />
+                  <groupfilter function='union'>
+                    <groupfilter function='member' level='[none:ZIP code:ok]' member='96306' />
+                    <groupfilter function='member' level='[none:ZIP code:ok]' member='96546' />
+                  </groupfilter>
+                </groupfilter>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[none:State:nk]' member='&quot;NJ&quot;' />
+                  <groupfilter function='member' level='[none:ZIP code:ok]' member='623' />
+                </groupfilter>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[none:State:nk]' member='&quot;PA&quot;' />
+                  <groupfilter function='member' level='[none:ZIP code:ok]' member='703' />
+                </groupfilter>
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1wyahdr1q32cz218liv1f1e0mefo].[Exclusions (State,ZIP code)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1wyahdr1q32cz218liv1f1e0mefo].[Longitude (generated)]' field-type='quantitative' max='35843605.74036859' min='25051510.063857306' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1wyahdr1q32cz218liv1f1e0mefo].[Latitude (generated)]' field-type='quantitative' max='7279043.3272595033' min='2427134.7343779257' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Heatmap' />
+            <encodings>
+              <text column='[federated.1wyahdr1q32cz218liv1f1e0mefo].[none:ZIP code:ok]' />
+              <lod column='[federated.1wyahdr1q32cz218liv1f1e0mefo].[none:State:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1wyahdr1q32cz218liv1f1e0mefo].[Latitude (generated)]</rows>
+        <cols>[federated.1wyahdr1q32cz218liv1f1e0mefo].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{B9F8BEF4-92BD-4D2B-859A-D1C4BD40D964}' />
+    </worksheet>
+    <worksheet name='In Progress %'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (Credit Card Dashboard)' name='federated.1wyahdr1q32cz218liv1f1e0mefo' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1wyahdr1q32cz218liv1f1e0mefo'>
+            <column caption='In Progress Compliant' datatype='integer' name='[Calculation_856528399963324432]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Company response to consumer]=&apos;In Progress&apos; then [Number of Records] END' />
+            </column>
+            <column caption='In Progress %' datatype='real' name='[Calculation_856528399964037137]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Calculation_856528399963324432])/SUM([Number of Records])' />
+            </column>
+            <column datatype='string' name='[Company response to consumer]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_856528399964037137]' derivation='User' name='[usr:Calculation_856528399964037137:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1wyahdr1q32cz218liv1f1e0mefo].[usr:Calculation_856528399964037137:qk]' value='p0.00%' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1wyahdr1q32cz218liv1f1e0mefo].[usr:Calculation_856528399964037137:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#76b7b2' fontname='Tableau Bold' fontsize='12'>In Progress %</run>
+                <run>Æ&#10;</run>
+                <run fontname='Tableau Bold' fontsize='12'><![CDATA[<[federated.1wyahdr1q32cz218liv1f1e0mefo].[usr:Calculation_856528399964037137:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{0ACB9A63-4FD3-4621-8CE1-296CC11F83F0}' />
+    </worksheet>
+    <worksheet name='In progress Complaints'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (Credit Card Dashboard)' name='federated.1wyahdr1q32cz218liv1f1e0mefo' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1wyahdr1q32cz218liv1f1e0mefo'>
+            <column caption='In Progress Compliant' datatype='integer' name='[Calculation_856528399963324432]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Company response to consumer]=&apos;In Progress&apos; then [Number of Records] END' />
+            </column>
+            <column datatype='string' name='[Company response to consumer]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_856528399963324432]' derivation='Sum' name='[sum:Calculation_856528399963324432:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1wyahdr1q32cz218liv1f1e0mefo].[sum:Calculation_856528399963324432:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontname='Tableau Bold' fontsize='26'>&lt;</run>
+                <run fontname='Tableau Bold' fontsize='26'>[federated.1wyahdr1q32cz218liv1f1e0mefo].[sum:Calculation_856528399963324432:qk]</run>
+                <run fontname='Tableau Bold' fontsize='26'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{098227D2-0768-43E1-A04F-3BE083A35A18}' />
+    </worksheet>
+    <worksheet name='Progress Bar'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (Credit Card Dashboard)' name='federated.1wyahdr1q32cz218liv1f1e0mefo' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1wyahdr1q32cz218liv1f1e0mefo'>
+            <column caption='Timely Response' datatype='integer' name='[Calculation_856528399935234052]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Timely response?]=&apos;Yes&apos; THEN 1 ELSE 0 END' />
+            </column>
+            <column caption='Closed %' datatype='real' name='[Calculation_856528399955193861]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='(SUM([Calculation_856528399935234052])/SUM([Number of Records]))*100' />
+            </column>
+            <column caption='AVG(1)' datatype='real' name='[Calculation_856528399962144783]' role='measure' type='quantitative' user:unnamed='Line'>
+              <calculation class='tableau' formula='AVG(1)' />
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Timely response?]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_856528399955193861]' derivation='User' name='[usr:Calculation_856528399955193861:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_856528399962144783]' derivation='User' name='[usr:Calculation_856528399962144783:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1wyahdr1q32cz218liv1f1e0mefo].[usr:Calculation_856528399955193861:qk]' field-type='quantitative' fold='true' scope='cols' synchronized='true' type='space' />
+            <format attr='display' class='0' field='[federated.1wyahdr1q32cz218liv1f1e0mefo].[usr:Calculation_856528399955193861:qk]' scope='cols' value='false' />
+            <format attr='display' class='0' field='[federated.1wyahdr1q32cz218liv1f1e0mefo].[usr:Calculation_856528399962144783:qk]' scope='cols' value='false' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1wyahdr1q32cz218liv1f1e0mefo].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1wyahdr1q32cz218liv1f1e0mefo].[usr:Calculation_856528399955193861:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1wyahdr1q32cz218liv1f1e0mefo].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='7' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1wyahdr1q32cz218liv1f1e0mefo].[usr:Calculation_856528399962144783:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1wyahdr1q32cz218liv1f1e0mefo].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows />
+        <cols>([federated.1wyahdr1q32cz218liv1f1e0mefo].[usr:Calculation_856528399962144783:qk] + [federated.1wyahdr1q32cz218liv1f1e0mefo].[usr:Calculation_856528399955193861:qk])</cols>
+      </table>
+      <simple-id uuid='{3285C001-A302-40A2-A51B-8E2C881EC0DC}' />
+    </worksheet>
+    <worksheet name='Rolling 12 Months Complaints'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (Credit Card Dashboard)' name='federated.1wyahdr1q32cz218liv1f1e0mefo' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Max Date Recieved' datatype='date' default-value-field='[federated.1wyahdr1q32cz218liv1f1e0mefo].[Calculation_856528399928164353]' name='[Parameter 1]' param-domain-type='any' role='measure' type='quantitative' value='#2021-04-10#'>
+              <calculation class='tableau' formula='#2021-04-10#' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1wyahdr1q32cz218liv1f1e0mefo'>
+            <column caption='Max Date Recieved' datatype='date' name='[Calculation_856528399928164353]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='{MAX([Date received])}' />
+            </column>
+            <column caption='12 Months Rolling' datatype='boolean' name='[Calculation_856528399930589186]' role='dimension' semantic-role='' type='nominal'>
+              <calculation class='tableau' formula='DATEDIFF(&apos;month&apos;,DATETRUNC(&apos;month&apos;,[Date received]),DATETRUNC(&apos;month&apos;,[Parameters].[Parameter 1]))&lt;12' />
+            </column>
+            <column caption='Rolling 12 months complaints' datatype='integer' name='[Calculation_856528399932530691]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM(IF [Calculation_856528399930589186]= TRUE then [Number of Records] END)' />
+            </column>
+            <column datatype='date' name='[Date received]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_856528399932530691]' derivation='User' name='[usr:Calculation_856528399932530691:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1wyahdr1q32cz218liv1f1e0mefo].[usr:Calculation_856528399932530691:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#76b7b2' fontname='Tableau Bold' fontsize='12'>Rolling 12 Months</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#e15759' fontname='Tableau Bold' fontsize='12'><![CDATA[<[federated.1wyahdr1q32cz218liv1f1e0mefo].[usr:Calculation_856528399932530691:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{32F5B7DC-5C95-43CC-91AF-BF4F7F10D826}' />
+    </worksheet>
+    <worksheet name='Sheet 9'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (Credit Card Dashboard)' name='federated.1wyahdr1q32cz218liv1f1e0mefo' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1wyahdr1q32cz218liv1f1e0mefo'>
+            <column caption='In Progress Compliant' datatype='integer' name='[Calculation_856528399963324432]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Company response to consumer]=&apos;In Progress&apos; then [Number of Records] END' />
+            </column>
+            <column datatype='string' name='[Company response to consumer]' role='dimension' type='nominal' />
+            <column datatype='date' name='[Date received]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_856528399963324432]' derivation='Sum' name='[sum:Calculation_856528399963324432:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date received]' derivation='Week-Trunc' name='[twk:Date received:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.1wyahdr1q32cz218liv1f1e0mefo].[sum:Calculation_856528399963324432:qk]' scope='rows' value='false' />
+            <encoding attr='space' class='1' field='[federated.1wyahdr1q32cz218liv1f1e0mefo].[sum:Calculation_856528399963324432:qk]' field-type='quantitative' fold='true' scope='rows' synchronized='true' type='space' />
+            <format attr='display' class='1' field='[federated.1wyahdr1q32cz218liv1f1e0mefo].[sum:Calculation_856528399963324432:qk]' scope='rows' value='false' />
+            <format attr='display' class='0' field='[federated.1wyahdr1q32cz218liv1f1e0mefo].[twk:Date received:qk]' scope='cols' value='false' />
+            <format attr='tick-color' scope='cols' value='#00000000' />
+            <format attr='tick-color' scope='rows' value='#00000000' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='show-null-value-warning' value='false' />
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1wyahdr1q32cz218liv1f1e0mefo].[sum:Calculation_856528399963324432:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1wyahdr1q32cz218liv1f1e0mefo].[sum:Calculation_856528399963324432:qk]' y-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#c0c0c0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1wyahdr1q32cz218liv1f1e0mefo].[sum:Calculation_856528399963324432:qk] + [federated.1wyahdr1q32cz218liv1f1e0mefo].[sum:Calculation_856528399963324432:qk])</rows>
+        <cols>[federated.1wyahdr1q32cz218liv1f1e0mefo].[twk:Date received:qk]</cols>
+      </table>
+      <simple-id uuid='{1491ACB3-0392-4152-A1CD-EE251073F3C5}' />
+    </worksheet>
+    <worksheet name='Timely Response'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (Credit Card Dashboard)' name='federated.1wyahdr1q32cz218liv1f1e0mefo' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1wyahdr1q32cz218liv1f1e0mefo'>
+            <column caption='Timely Response' datatype='integer' name='[Calculation_856528399935234052]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Timely response?]=&apos;Yes&apos; THEN 1 ELSE 0 END' />
+            </column>
+            <column datatype='string' name='[Timely response?]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_856528399935234052]' derivation='Sum' name='[sum:Calculation_856528399935234052:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1wyahdr1q32cz218liv1f1e0mefo].[sum:Calculation_856528399935234052:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontname='Tableau Bold' fontsize='26'>&lt;</run>
+                <run fontname='Tableau Bold' fontsize='26'>[federated.1wyahdr1q32cz218liv1f1e0mefo].[sum:Calculation_856528399935234052:qk]</run>
+                <run fontname='Tableau Bold' fontsize='26'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{1C1E8D15-30CF-403E-9DDC-CC6090BBC991}' />
+    </worksheet>
+    <worksheet name='Total Complaints'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (Credit Card Dashboard)' name='federated.1wyahdr1q32cz218liv1f1e0mefo' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1wyahdr1q32cz218liv1f1e0mefo'>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1wyahdr1q32cz218liv1f1e0mefo].[sum:Number of Records:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontname='Tableau Bold' fontsize='26'>&lt;</run>
+                <run fontname='Tableau Bold' fontsize='26'>[federated.1wyahdr1q32cz218liv1f1e0mefo].[sum:Number of Records:qk]</run>
+                <run fontname='Tableau Bold' fontsize='26'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{CF0E8DEF-EEC3-4137-92F3-FFEAE9AD875E}' />
+    </worksheet>
+    <worksheet name='Trend'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (Credit Card Dashboard)' name='federated.1wyahdr1q32cz218liv1f1e0mefo' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column alias='Daily' caption='Trend' datatype='string' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;day&quot;'>
+              <calculation class='tableau' formula='&quot;day&quot;' />
+              <aliases>
+                <alias key='&quot;day&quot;' value='Daily' />
+                <alias key='&quot;month&quot;' value='Monthly' />
+                <alias key='&quot;quarter&quot;' value='Quarterly' />
+                <alias key='&quot;week&quot;' value='Weekly' />
+                <alias key='&quot;year&quot;' value='Yearly' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1wyahdr1q32cz218liv1f1e0mefo'>
+            <column caption='Trend Dynamic' datatype='date' datatype-customized='true' name='[Calculation_856528400056836115]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='DATE(DATETRUNC([Parameters].[Parameter 2],[Date received]))' />
+            </column>
+            <column datatype='date' name='[Date received]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_856528400056836115]' derivation='None' name='[none:Calculation_856528400056836115:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.1wyahdr1q32cz218liv1f1e0mefo].[none:Calculation_856528400056836115:qk]' scope='cols' value='false' />
+            <encoding attr='space' class='1' field='[federated.1wyahdr1q32cz218liv1f1e0mefo].[sum:Number of Records:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+            <format attr='line-visibility' id='refline0' value='on' />
+            <format attr='line-pattern-only' id='refline0' value='dotted' />
+            <format attr='text-format' id='refline0' value='n#,##0;-#,##0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <reference-line axis-column='[federated.1wyahdr1q32cz218liv1f1e0mefo].[sum:Number of Records:qk]' enable-instant-analytics='true' formula='average' id='refline0' label='Avg : &lt;Value&gt;' label-type='custom' probability='95' scope='per-table' value-column='[federated.1wyahdr1q32cz218liv1f1e0mefo].[sum:Number of Records:qk]' z-order='1' />
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1wyahdr1q32cz218liv1f1e0mefo].[sum:Number of Records:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1wyahdr1q32cz218liv1f1e0mefo].[sum:Number of Records:qk]' y-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <text column='[federated.1wyahdr1q32cz218liv1f1e0mefo].[sum:Number of Records:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-mode' value='range' />
+                <format attr='mark-color' value='#f17b79' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1wyahdr1q32cz218liv1f1e0mefo].[sum:Number of Records:qk] + [federated.1wyahdr1q32cz218liv1f1e0mefo].[sum:Number of Records:qk])</rows>
+        <cols>[federated.1wyahdr1q32cz218liv1f1e0mefo].[none:Calculation_856528400056836115:qk]</cols>
+      </table>
+      <simple-id uuid='{1D9C327A-3924-4272-9061-02259C930C96}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Credit Card Dashboards'>
+      <style>
+        <style-rule element='dash-title'>
+          <format attr='color' value='#f28e2b' />
+          <format attr='font-family' value='Tableau Bold' />
+        </style-rule>
+      </style>
+      <size maxheight='900' maxwidth='1500' minheight='900' minwidth='1500' sizing-mode='range' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98222' id='5' param='vert' type-v2='layout-flow' w='98934' x='533' y='889'>
+            <zone h='4556' id='7' type-v2='title' w='98934' x='533' y='889'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='93666' id='6' type-v2='layout-basic' w='98934' x='533' y='5445'>
+              <zone h='93666' id='8' layout-strategy-id='distribute-evenly' param='horz' type-v2='layout-flow' w='85067' x='533' y='5445'>
+                <zone h='93667' id='13' param='vert' type-v2='layout-flow' w='85067' x='533' y='5444' />
+              </zone>
+              <zone h='93666' id='14' param='vert' type-v2='layout-flow' w='13867' x='85600' y='5445'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='solid' />
+                  <format attr='border-width' value='1' />
+                  <format attr='background-color' value='#ddebf0' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='19556' id='9' layout-strategy-id='distribute-evenly' param='horz' type-v2='layout-flow' w='84933' x='533' y='6444'>
+          <zone h='19556' id='12' type-v2='empty' w='28334' x='533' y='6444'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+              <format attr='background-color' value='#aaaaff9b' />
+            </zone-style>
+          </zone>
+          <zone h='19556' id='11' type-v2='empty' w='28333' x='28867' y='6444'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+              <format attr='background-color' value='#f393679b' />
+            </zone-style>
+          </zone>
+          <zone h='19556' id='10' type-v2='empty' w='28267' x='57200' y='6444'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+              <format attr='background-color' value='#00d6d69b' />
+            </zone-style>
+          </zone>
+        </zone>
+        <zone forceUpdate='true' h='4111' id='15' type-v2='text' w='14800' x='6467' y='7889'>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Tableau Bold' fontsize='16'>Total Complaints</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='4111' id='16' type-v2='text' w='14800' x='34867' y='7778'>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Tableau Bold' fontsize='16'>Timely Response</run>
+            <run>Æ&#10;</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='4111' id='17' type-v2='text' w='14800' x='65133' y='7667'>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Tableau Bold' fontsize='15'>In Progress</run>
+            <run>Æ&#10;</run>
+          </formatted-text>
+        </zone>
+        <zone h='7444' id='18' name='Total Complaints' show-title='false' w='10133' x='1933' y='12333' />
+        <zone h='7000' id='19' name='Rolling 12 Months Complaints' show-title='false' w='11600' x='14400' y='12444' />
+        <zone h='5111' id='20' name='Complaints Sparkling' show-title='false' w='27667' x='867' y='20222' />
+        <zone h='7889' id='21' type-v2='empty' w='400' x='13000' y='12222'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#e15759' />
+          </zone-style>
+        </zone>
+        <zone h='5889' id='22' name='Timely Response' show-title='false' w='9400' x='30600' y='13667' />
+        <zone h='7889' id='23' type-v2='empty' w='400' x='42133' y='12222'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#e15759' />
+          </zone-style>
+        </zone>
+        <zone h='7000' id='24' name='Closed %' show-title='false' w='8133' x='45667' y='13444' />
+        <zone h='5111' id='25' name='Progress Bar' show-title='false' w='27933' x='29067' y='20444' />
+        <zone h='7889' id='27' type-v2='empty' w='400' x='71000' y='12444'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#e15759' />
+          </zone-style>
+        </zone>
+        <zone h='6333' id='28' name='In progress Complaints' show-title='false' w='8667' x='59933' y='13000' />
+        <zone h='8000' id='29' name='In Progress %' show-title='false' w='9800' x='73333' y='11667' />
+        <zone h='5889' id='30' name='Sheet 9' show-title='false' w='27733' x='57533' y='19778' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='1' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{26862635-888E-4EC3-A2B2-9057F96A7017}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Total Complaints'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{61E9F4FD-469E-4AD3-8C6C-8F43975A3B4B}' />
+    </window>
+    <window class='worksheet' name='Rolling 12 Months Complaints'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{DD2EA063-77CE-4A73-A7B1-548225FD35F6}' />
+    </window>
+    <window class='worksheet' name='Complaints Sparkling'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{118407D2-FBAA-4879-82BA-FD72A1B9715E}' />
+    </window>
+    <window class='worksheet' name='Timely Response'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{D98CC2ED-3A93-48F0-9733-B90CCC7979AD}' />
+    </window>
+    <window class='worksheet' name='Closed %'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{177626CA-A8D5-481A-BC52-8F85E6284CAA}' />
+    </window>
+    <window class='worksheet' name='Progress Bar'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='7' param='[federated.1wyahdr1q32cz218liv1f1e0mefo].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{55687BA1-07EC-4A28-BBF9-8AB3344A32E3}' />
+    </window>
+    <window class='worksheet' name='In progress Complaints'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='48'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{5E391A49-4352-43BD-98A3-6A1EEA26B85A}' />
+    </window>
+    <window class='worksheet' name='In Progress %'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{0E55456A-FC52-4901-9CEB-E666FFD5EC88}' />
+    </window>
+    <window class='worksheet' name='Sheet 9'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6B20EC7E-17E0-4CFF-A1AA-5F47EA7EB358}' />
+    </window>
+    <window class='dashboard' name='Credit Card Dashboards'>
+      <viewpoints>
+        <viewpoint name='Closed %'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Complaints Sparkling'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='In Progress %'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='In progress Complaints'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Progress Bar'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Rolling 12 Months Complaints'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 9'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Timely Response'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Total Complaints'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='13' />
+      <simple-id uuid='{B20E00D8-5F7D-40E6-80AB-7A452546C9FB}' />
+    </window>
+    <window class='worksheet' name='Trend'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[Parameter 2]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{8336BC4B-0349-4C70-A0A4-0A2390C15422}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Density'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='1' />
+      </viewpoint>
+      <simple-id uuid='{8EE05B4C-E46E-443E-80E7-1AC147B46508}' />
+    </window>
+  </windows>
+</workbook>
