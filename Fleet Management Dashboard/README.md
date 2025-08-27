@@ -41,3 +41,7 @@ Share of the fleet not available due to issues.
 Line plot showing hourly utilization over a 24-hour window to reveal peak/off-peak usage.
 
 ---
+
+
+## Dashboard 
+![alt text](image-1.png)
